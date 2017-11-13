@@ -58,6 +58,9 @@ while (true) {
         if (student.name === search) {
             message = getStudentReport(student);
             print(message);
-        }
+        } //else {
+        //message = 'Student name not in records.';
+        //print(message);
+        //}
     }
 }
