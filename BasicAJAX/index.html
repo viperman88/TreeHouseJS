@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <title>AJAX with JavaScript</title>
+  <script>
+    //Create an XMLHTTP Request object
+    var xhr = new XMLHttpRequest();
+    //Create a callback function
+    xhr.onreadystatechange = () => {
+      //Add a conditional statement that tests to make sure the server has sent back its complete response
+      if (xhr.readyState === 4){
+        //test to make sure the return status from the server is OK.
+        if(xhr.status === 200){
+          //add data to page . //DOM element's innerHTML property to set the HTML 
+          document.getElementById('ajax').innerHTML = xhr.responseText;
+        } else{
+        alert(xhr.statusText);
+        }
+      } 
+    };
+    //Open a request 1.Method(GET, POST) 2.URL/FIle
+    xhr.open('GET', 'sidebars.html');
+    const sendAJAX = () => {
+      //Send Request
+      xhr.send();
+      document.getElementById('load').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1>Bring on the AJAX</h1>
+            <button id="load" onclick='sendAJAX()'>Bring It!</button>
+          </div>
+          <div id="ajax">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

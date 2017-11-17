@@ -72,7 +72,7 @@ toggleList.addEventListener('click', () => {
 });
 
 descriptionButton.addEventListener('click', () => {
-    descriptionP.innerHTML = descriptionInput.value + ':';
+    descriptionP.textContent = descriptionInput.value + ':';
     descriptionInput.value = '';
 });
 
