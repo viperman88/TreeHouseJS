@@ -5,30 +5,44 @@
     <meta charset="utf-8">
     <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>AJAX with JavaScript</title>
     <script>
-        //Create an XMLHTTP Request object
-        var xhr = new XMLHttpRequest();
-        //Create a callback function
-        xhr.onreadystatechange = () => {
-            //Add a conditional statement that tests to make sure the server has sent back its complete response
-            if (xhr.readyState === 4) {
-                //test to make sure the return status from the server is OK.
-                if (xhr.status === 200) {
-                    //add data to page . //DOM element's innerHTML property to set the HTML
-                    document.getElementById('ajax').innerHTML = xhr.responseText;
-                } else {
-                    alert(xhr.statusText);
-                }
-            }
-        };
-        //Open a request 1.Method(GET, POST) 2.URL/FIle
-        xhr.open('GET', 'sidebars.html');
+        //.get() method 
+        // const sendAJAX = () => {
+        //     $.get('sidebar.html', (response) => {
+        //         $('#ajax').html(response);
+        //     });
+        //     $('#load').hide();
+        // }
+
+        //This jQuery function completes same tasks as entire block of commented AJAX below
         const sendAJAX = () => {
-            //Send Request
-            xhr.send();
-            document.getElementById('load').style.display = 'none';
+            $('#ajax').load('sidebar.html');
+            $('#load').hide();
         }
+        // //Create an XMLHTTP Request object
+        // var xhr = new XMLHttpRequest();
+        // //Create a callback function
+        // xhr.onreadystatechange = () => {
+        //     //Add a conditional statement that tests to make sure the server has sent back its complete response
+        //     if (xhr.readyState === 4) {
+        //         //test to make sure the return status from the server is OK.
+        //         if (xhr.status === 200) {
+        //             //add data to page . //DOM element's innerHTML property to set the HTML
+        //             document.getElementById('ajax').innerHTML = xhr.responseText;
+        //         } else {
+        //             alert(xhr.statusText);
+        //         }
+        //     }
+        // };
+        // //Open a request 1.Method(GET, POST) 2.URL/FIle
+        // xhr.open('GET', 'sidebars.html');
+        // const sendAJAX = () => {
+        //     //Send Request
+        //     xhr.send();
+        //     document.getElementById('load').style.display = 'none';
+        // }
     </script>
 </head>
 
