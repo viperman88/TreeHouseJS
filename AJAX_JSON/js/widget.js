@@ -1,4 +1,4 @@
-//JSON version
+//jQuery version
 $('document').ready(() => {
     var url = '../data/employees.json';
     $.getJSON(url, (response) => {
