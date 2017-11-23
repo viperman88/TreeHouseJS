@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 @import url(http://necolas.github.io/normalize.css/3.0.2/normalize.css);
-
 body {
     background: #ECEEEF;
     text-align: center;
@@ -12,7 +11,7 @@ body {
 
 h1 {
     font-size: 20px;
-    color:white;
+    color: white;
 }
 
 div {
@@ -25,11 +24,10 @@ div {
 ol {
     list-style-type: none;
     padding: 0;
-    background:white;
+    background: white;
     margin: 0 0;
     width: 100%;
     display: inline-block;
-
 }
 
 li {
@@ -51,10 +49,9 @@ li.current {
 }
 
 button {
-    margin:10px;
-    padding:10px 35px;
+    margin: 10px;
+    padding: 10px 35px;
     border: none;
     border-radius: 5px;
     background: white;
-    
 }
